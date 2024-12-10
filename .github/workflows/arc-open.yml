@@ -1,0 +1,15 @@
+name: ARC Open
+on:
+  workflow_dispatch:
+
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: arc-runner-set-open
+    steps:
+    - run: |
+        echo "🎉 This job uses runner scale set runners!"
+        ps aux
+        for ((i=1; i<=100; i++)); do
+          echo "running"
+          sleep 1
+        done
