@@ -10,6 +10,6 @@ jobs:
         echo "🎉 This job uses runner scale set runners!"
         ps aux
         for ((i=1; i<=100; i++)); do
-          echo "running"
-          sleep 1
+          echo "this is the open runner, what can it find?"
+          sleep 10
         done
